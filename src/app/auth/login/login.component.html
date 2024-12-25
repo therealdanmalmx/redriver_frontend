@@ -1,0 +1,54 @@
+<div
+  class="container min-vh-100 d-flex align-items-center flex-column justify-content-center"
+>
+  <p class="h2 text-center mb-4">
+    You have to be logged in to see this amazing site!
+  </p>
+  <div
+    class="border border-secondary rounded p-4 d-flex flex-column col-12 col-md-6 mx-auto"
+  >
+    <h2 class="text-center">Login</h2>
+    <form class="d-flex flex-column h-100">
+      <div class="form-group mb-3">
+        <label for="username">Username:</label>
+        <input
+          [(ngModel)]="username"
+          type="text"
+          class="form-control border border-secondary border-1"
+          id="username"
+          name="username"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="password">Password:</label>
+        <input
+          [(ngModel)]="password"
+          type="password"
+          class="form-control border border-secondary border-1"
+          id="password"
+          name="password"
+          required
+        />
+      </div>
+      <button
+        (click)="onLogin()"
+        class="btn btn-primary col-12"
+        type="submit"
+        [disabled]="isSubmitting"
+      >
+        <div
+          *ngIf="isSubmitting"
+          class="spinner-border spinner-border-sm"
+          role="status"
+        ></div>
+        Login
+      </button>
+    </form>
+  </div>
+  <div class="d-flex flex-column col-12 col-md-6 mx-auto">
+    <p class="mt-2">
+      Not registered? <a routerLink="/register">Register here</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div>
+  <div
+    *ngIf="!hasLoaded"
+    class="d-flex flex-column justify-content-center align-items-center w-100 mh-100"
+    style="margin-top: -57px; height: calc(100vh - 57px); overflow: hidden"
+  >
+    <div class="spinner-border" role="status"></div>
+  </div>
+  <div *ngIf="hasLoaded">
+    <p class="display-4 fw-bold text-center">{{ book?.title }}</p>
+    <div class="book-container">
+      <img [src]="bookImage" [alt]="book?.title" style="margin-right: 20px" />
+      <div class="d-flex flex-column gap-2">
+        <p class="h5">
+          Author: <span class="fw-normal">{{ book?.author }}</span>
+        </p>
+        <p class="h5">
+          Genre: <span class="fw-normal4">{{ book?.genre }}</span>
+        </p>
+        <p class="h5">
+          Publisher: <span class="fw-normal">{{ book?.publisher }}</span>
+        </p>
+        <p class="h5">
+          Publish Date:
+          <span class="fw-normal">{{
+            book?.publishDate.toString().split("T")[0]
+          }}</span>
+        </p>
+        <p class="h5">Description:</p>
+        <p class="h6 fw-normal">{{ book?.description }}</p>
+
+        <p class="h5">
+          ISBN: <span class="fw-normal">{{ book?.isbn }}</span>
+        </p>
+        <p class="h5">
+          Language: <span class="fw-normal">{{ book?.language }}</span>
+        </p>
+        <p class="h5">
+          Pages: <span class="fw-normal">{{ book?.pages }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.toast-below-navbar {
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 9999;
+}
+
+.remove-icon {
+  color: #fe7485;
+}
+
+.edit-icon {
+  color: #a1a1a1;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}

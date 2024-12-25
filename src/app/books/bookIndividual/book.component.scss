@@ -1,0 +1,45 @@
+.book-title {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.book-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  flex-direction: row;
+
+  .book-details {
+    margin: auto;
+
+    .normal-weight {
+      font-weight: normal;
+    }
+  }
+
+  img {
+    margin-right: 20px;
+  }
+}
+
+.book-description {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .book-container {
+    flex-direction: column;
+
+    img {
+      margin: 0 auto 20px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .book-details {
+      text-align: left;
+    }
+  }
+}

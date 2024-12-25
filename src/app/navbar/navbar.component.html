@@ -1,0 +1,34 @@
+<nav
+  class="navbar navbar-expand-md bg-dark fixed-top border-bottom border-body"
+  data-bs-theme="dark"
+>
+  <div class="container-fluid">
+    <img [src]="logo" class="navbar-brand" />
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav d-dlex justify-content-between w-100">
+        <div class="d-flex flex-column flex-md-row">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/books">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/quotes">Quotes</a>
+          </li>
+        </div>
+        <li class="nav-item" *ngIf="loggedIn">
+          <a class="nav-link" href="#" (click)="logOut()">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

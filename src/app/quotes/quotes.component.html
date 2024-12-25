@@ -1,0 +1,8 @@
+<h1 class="text-center mb-4">My favourite quotes!</h1>
+<ul class="list-group d-flex flex-column col-10 col-md-6 mx-auto gap-4">
+  @for (q of quotes; track q) {
+  <li class="list-group-item bg-secondary" style="--bs-bg-opacity: 0.5">
+    <p class="h2">{{ q.message }}</p>
+  </li>
+  }
+</ul>
