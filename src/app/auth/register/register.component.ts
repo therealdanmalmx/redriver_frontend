@@ -41,8 +41,8 @@ export class RegisterComponent {
           this.isSubmitting = false;
         }
       },
-      error: (error) => {
-        this.toastr.error(error.error.message);
+      error: () => {
+        this.toastr.error('Could not register user.');
         this.isSubmitting = false;
       },
     });
