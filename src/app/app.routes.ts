@@ -13,6 +13,7 @@ import { loggedInGuard } from './auth/guard/logged-in.guard';
 export const routes: Routes = [
   {
     path: '',
+    component: HomeComponent,
     canActivate: [apiGuard],
     children: [
       { path: '', redirectTo: 'books', pathMatch: 'full' },
