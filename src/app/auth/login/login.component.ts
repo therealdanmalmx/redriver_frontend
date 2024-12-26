@@ -41,8 +41,8 @@ export class LoginComponent {
         this.router.navigateByUrl('books');
         this.isSubmitting = false;
       },
-      error: (error) => {
-        this.toastr.error('Error logging in:', error);
+      error: () => {
+        this.toastr.error('Error logging in');
         this.isSubmitting = false;
       },
     });
