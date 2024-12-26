@@ -14,25 +14,20 @@ export const routes: Routes = [
   {
     path: '',
     canActivate: [apiGuard],
-    children: [{ path: '', redirectTo: 'books', pathMatch: 'full' }],
-  },
-  { path: 'login', component: LoginComponent, canActivate: [loggedInGuard] },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    canActivate: [loggedInGuard],
-  },
-  {
-    path: '',
-    component: HomeComponent,
-    canActivate: [apiGuard],
     children: [
+      { path: '', redirectTo: 'books', pathMatch: 'full' },
       { path: 'books', component: BooksComponent },
       { path: 'books/:id', component: BookComponent },
       { path: 'add-book', component: AddBookComponent },
       { path: 'books/:id/edit', component: UpdateBookComponent },
       { path: 'quotes', component: QuotesComponent },
     ],
+  },
+  { path: 'login', component: LoginComponent, canActivate: [loggedInGuard] },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    canActivate: [loggedInGuard],
   },
   { path: '**', redirectTo: 'login' },
 ];
