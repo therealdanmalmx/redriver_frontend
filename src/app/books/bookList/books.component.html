@@ -6,12 +6,12 @@
   >
     <div class="spinner-border" role="status"></div>
   </div>
-  <div class="d-flex justify-content-end">
-    <button class="btn btn-primary mb-2" routerLink="/add-book">
-      Add new book
-    </button>
-  </div>
   <div *ngIf="hasLoaded">
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-primary mb-2" routerLink="/add-book">
+        Add new book
+      </button>
+    </div>
     <p class="h6 text-start text-secondary my-2">Click title for more info.</p>
     <ul class="list-group">
       @for (book of books; track book) {
